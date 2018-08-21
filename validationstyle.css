@@ -1,0 +1,51 @@
+body,html{
+    margin: 0px;
+    padding: 0px;
+    background-color: #889779;
+}
+main {
+    margin-left: 40%;
+}
+.l1 {
+    margin-right: 100px;
+}
+.l2 {
+    margin-right: 102px;
+}
+.l3 {
+    margin-right: 76px;
+}
+.l4 {
+    margin-right: 134px;
+}
+.l5 {
+    position: relative;
+    bottom: 25px;
+    margin-right: 130px;
+}
+.l6 {
+    margin-right: 154px;
+}
+.l7 {
+    margin-right: 120px;
+}
+input {
+    margin: 10px;
+}
+.error {
+    color: #FF0000;
+}
+h1 {
+    color: #16d3e0;
+}
+label {
+    color: #234235;
+}
+input[type="submit"] {
+    background-color: #007ef3;
+    width: 150px;
+    height: 50px;
+    position: relative;
+    left: 110px;
+    top: 50px;
+}

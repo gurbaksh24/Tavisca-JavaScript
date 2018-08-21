@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="validationstyle.css" />
+    <script src="validationscript.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1>Register Here</h1>
+        <form action="welcome.html" onsubmit="return validateOnSubmit()">
+            <div>
+                <label class="l1" for="firstName">First Name </label>
+                <input type="text" id="firstName" placeholder="First Name" title="First Name" onblur="firstNameValidate()">
+                <span class="error" id="errorFname"></span>
+            </div>
+            <div>
+                <label class="l2" for="lastName">Last Name </label>
+                <input type="text" id="lastName" placeholder="Last Name" title="Last Name" onblur="lastNameValidate()">
+                <span class="error" id="errorLname"></span>
+            </div>
+            <div>
+                <label class="l3" for="phoneNumber">Phone Number </label>
+                <input type="text" id="phoneNumber" placeholder="Phone Number" title="Phone Number" onblur="phoneValidate()">
+                <span class="error" id="errorPno"></span>
+            </div>
+            <div>
+                <label class="l4" for="email">Email </label>
+                <input type="text" id="email" placeholder="Email" title="Email" onblur="emailValidate()">
+                <span class="error" id="errorEmail"></span>
+            </div>
+            <div>
+                <label class="l5" for="address">Address </label>
+                <textarea rows="4" cols="30" id="address" placeholder="Address" title="Address"></textarea>
+            </div>
+            <div>
+                <label class="l6" for="city">City </label>
+                <select id="city">
+                    <option>Mumbai</option>
+                    <option>Pune</option>
+                    <option>Bangalore</option>
+                    <option>Hyderabad</option>
+                    <option>New Delhi</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div>
+                <label class="l7" for="gender">Gender </label>
+                <input type="radio" name="gender" value="Male">Male
+                <input type="radio" name="gender" value="Female">Female
+                <input type="radio" name="gender" value="Trans">Trans
+                <span class="error" id="errorGender"></span>
+            </div>
+            <div>
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
