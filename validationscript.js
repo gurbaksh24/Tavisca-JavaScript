@@ -1,6 +1,5 @@
 function validateOnSubmit() {
-    debugger;
-    if (firstNameValidate() == true && lastNameValidate() == true && phoneValidate() == true && emailValidate() == true && genderValidate() == true) {
+    if (firstNameValidate() == true && lastNameValidate() == true && phoneValidate() == true && emailValidate() == true && cityValidate() == true && genderValidate() == true) {
         return true;
     }
     return false;
@@ -88,5 +87,17 @@ function genderValidate() {
         return false;
     }
     document.getElementById("errorGender").innerHTML = "";
+    return true;
+}
+function cityValidate() {
+    debugger;
+    var city = document.getElementById("city");
+    if (city.value == null || city.value == "") {
+        document.getElementById("errorCity").innerHTML = "City can't be none";
+        city.style.border="2px solid #FF0000";
+        return false;
+    }
+    document.getElementById("errorCity").innerHTML = "";
+    city.style.border="1px solid #808080";
     return true;
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Form Validation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="validationstyle.css" />
     <script src="validationscript.js"></script>
@@ -40,14 +40,16 @@
             </div>
             <div>
                 <label class="l6" for="city">City </label>
-                <select id="city">
-                    <option>Mumbai</option>
-                    <option>Pune</option>
-                    <option>Bangalore</option>
-                    <option>Hyderabad</option>
-                    <option>New Delhi</option>
-                    <option>Other</option>
+                <select id="city" onchange="cityValidate()">
+                    <option value="">None</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="">Pune</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Hyderabdad">Hyderabad</option>
+                    <option value="New Delhi">New Delhi</option>
+                    <option value="Other">Other</option>
                 </select>
+                <span class="error" id="errorCity"></span>
             </div>
             <div>
                 <label class="l7" for="gender">Gender </label>
