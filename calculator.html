@@ -11,7 +11,7 @@
 <body>
     <main>
         <div class="screen">
-            <input type="text" id="screen" onkeypress="showResult(event)" autofocus>
+            <input type="text" id="screen" onkeypress="showResultWhenEnterPress(event)" autofocus>
         </div>
 
         <div class="buttons">
@@ -29,8 +29,14 @@
             <button class="btn op" onclick="displayOnScreen(this.value)" value="*">*</button>
             <button class="btn" onclick="displayOnScreen(this.value)" value="0">0</button>
             <button class="btn op" onclick="showResult()" value="=">=</button>
-            <button class="btn" onclick="clearScreen()">CLR</button>
+            <div class="combine-div">
+                <button class="btn combine" onclick="clearScreen()">CLR</button>
+                <button class="btn combine history" onclick="showHistory()">History</button>
+            </div>
             <button class="btn op" onclick="displayOnScreen(this.value)" value="/">/</button>
+        </div>
+        <div id="history-screen" class="history-screen">
+
         </div>
     </main>
 </body>
