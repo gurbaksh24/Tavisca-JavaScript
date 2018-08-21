@@ -50,4 +50,5 @@ html, body {
     font-weight: bold;
     overflow-y: scroll;
     border: 1px solid #000000;
+    display: none;
 }

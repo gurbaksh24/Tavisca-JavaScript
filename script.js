@@ -28,5 +28,11 @@ function showResultWhenEnterPress(e) {
     }  
 }
 function showHistory() {
+    var x = document.getElementById("history-screen");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
     document.getElementById("history-screen").innerHTML=hist;
 }
