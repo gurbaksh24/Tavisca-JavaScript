@@ -1,42 +1,42 @@
-function fillData(e){
+function fillData(e) {
     debugger;
-    var cities=["Delhi","Pune","Mumbai","Bangalore","Hyderabad","Bareilly"];
-    var data=document.getElementById("city").value;
-    var suggestionBox=document.getElementById("suggestions");
-    var str="<ul>";
-    var flag=0;
-
+    var cities = ["Ragul", "Rajpreet", "Pallvi", "Neha", "Ankita", "Raja", "Shreea", "Smriti", "Shrijeet", "Ayush", "Swapnil", "Nihit", "Bhargavi", "Anushka", "Swinal", "Utkarsh", "Saurabh", "Paarth", "Vishwas", "Mohit", "Gurbaksh", "Ashwarya"];
+    var data = document.getElementById("city").value;
+    var suggestionBox = document.getElementById("suggestions");
+    var str = "<ul>";
+    var flag = 0;
     cities.forEach(element => {
-        if(element.toUpperCase().includes(data.toUpperCase()))
-        {
-            str+="<li id='"+element+"' onclick='chooseData(this.id)' onkeydown='selectItem(event)'>"+element+"</li>";
+        if (element.toUpperCase().includes(data.toUpperCase())) {
+            str += "<li id='" + element + "' onclick='chooseData(this.id)' onkeydown='selectItem(event,this.innerHTML)'>" + element + "</li>";
             console.log(str);
-            flag=1;
+            flag = 1;
         }
     });
-    if(flag==1)
-        str+="</ul>";
-    else
-    {
-        str="<li>No Data Found</li></ul>";
+    if (flag == 1)
+        str += "</ul>";
+    else {
+        str = "<li>No Data Found</li></ul>";
     }
-    if(data=="")
-        suggestionBox.innerHTML="";
+    if (data == "")
+        suggestionBox.innerHTML = "";
     else
-        suggestionBox.innerHTML=str;
+        suggestionBox.innerHTML = str;
 }
 
-function chooseData(data){
+function chooseData(data) {
     debugger;
-    document.getElementById("city").value=data;
-    document.getElementById("suggestions").innerHTML="";
+    document.getElementById("city").value = data;
+    document.getElementById("suggestions").innerHTML = "";
 }
-function clearText(){
-    document.getElementById("city").value="";
-    document.getElementById("suggestions").innerHTML="";
+function clearText() {
+    document.getElementById("city").value = "";
+    document.getElementById("suggestions").innerHTML = "";
 }
-function selectItem(evt) {
-    if(evt.keyCode==40) {
-        document.getElementById('')
-    }
+function selectItem(evt,data) {
+    debugger;
+    console.log(data);
+}
+function clearTextOnBodyClick() {
+    debugger;
+    document.getElementById("suggestions").innerHTML = "";
 }
