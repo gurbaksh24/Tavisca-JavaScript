@@ -1,6 +1,7 @@
 function fillData(e) {
     debugger;
     var cities = ["Ragul", "Rajpreet", "Pallvi", "Neha", "Ankita", "Raja", "Shreea", "Smriti", "Shrijeet", "Ayush", "Swapnil", "Nihit", "Bhargavi", "Anushka", "Swinal", "Utkarsh", "Saurabh", "Paarth", "Vishwas", "Mohit", "Gurbaksh", "Ashwarya"];
+    cities=cities.sort();
     var data = document.getElementById("city").value;
     var suggestionBox = document.getElementById("suggestions");
     var str = "<ul>";
