@@ -11,13 +11,13 @@
 </head>
 
 <body onclick="clearTextOnBodyClick()">
-    <div class="box" onclick="clearTextOnBodyClick()">
+    <div class="box">
         <h1>
             Type Here
         </h1>
-        <input type="text" id="city" onkeyup="fillData(event)"><span onclick="clearText()">&#10060;</span>
+        <input type="text" id="city" placeholder="Search" title="Search" onkeyup="fillData(event);selectItem(event)" autofocus>
+        <span id="cross" onclick="clearText()">&#10060;</span>
         <div id="suggestions" class="suggestions">
-
         </div>
     </div>
 </body>

@@ -1,19 +1,20 @@
 body {
-    margin: auto;
-    width: 50%;
+    width: 1024px;
+    height: 720px;
     padding: 100px;
     background-color: #c4ebdb;
     color: #123423;
     font-size: 14pt;
 }
 .box{
-    margin-left: 100px;
+    max-width: 500px;
+    margin-left: auto;
 }
 .suggestions{
     width: 302px;
     background-color: #b7dacd;
     max-height: 110px;
-    overflow-y:scroll;
+    overflow-y:auto;
 }
 ul{
     margin: 0px;
@@ -24,7 +25,7 @@ li {
     list-style-type: none;
 }
 li:hover {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
 }
 input {
     width: 300px;
