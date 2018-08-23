@@ -1,8 +1,12 @@
 var cities = ["Ragul", "Rajpreet", "Pallvi", "Neha", "Ankita", "Raja", "Shreea", "Smriti", "Shrijeet", "Ayush", "Swapnil", "Nihit", "Bhargavi", "Anushka", "Swinal", "Utkarsh", "Saurabh", "Paarth", "Vishwas", "Mohit", "Gurbaksh", "Ashwarya"];
-cities = cities.sort();
 var suggestionIndex = [];
 var scrollFlag = 0;
 var resetInput = 0;
+var i = 0;
+var j = 0;
+var moveUp = 0;
+var moveDown = 0;
+cities = cities.sort();
 function fillData(e) {
     if (resetInput == 0) {
         suggestionIndex = [];
@@ -15,9 +19,10 @@ function fillData(e) {
         var flagNoData = 0;
         var flagFirstElementHover = 0;
         var j = 0;
+        suggestionIndex=[];
         for (var i = 0; i < cities.length; i++) {
             if (cities[i].toUpperCase().includes(data.toUpperCase())) {
-                str += "<li id='" + i + "' onclick='chooseData(this.innerHTML)'>" + cities[i] + "</li>";
+                str += "<li id='" + i + "' onclick='chooseData(this.innerHTML)' onmouseover='hoverElements(this.id)'>" + cities[i] + "</li>";
                 suggestionIndex[j] = i;
                 flagNoData = 1;
                 j++;
@@ -41,7 +46,7 @@ function fillData(e) {
         }
     }
 }
-
+var p=5;
 function chooseData(data) {
     document.getElementById("city").value = data;
     document.getElementById("suggestions").innerHTML = "";
@@ -58,12 +63,8 @@ function clearText() {
     moveUp = 0;
     moveDown = 0;
 }
-var i = 0;
-var j = 0;
-var moveUp = 0;
-var moveDown = 0;
-var scrollFlag = 0;
 function selectItem(evt) {
+    debugger;
     if (scrollFlag == 0) {
         i = 0;
         j = 0;
@@ -71,6 +72,7 @@ function selectItem(evt) {
         moveDown = 0;
         scrollFlag = 1;
     }
+
     i = suggestionIndex[j];
     if (evt.keyCode == 13) {
         chooseData(cities[i]);
@@ -104,4 +106,14 @@ function selectItem(evt) {
 }
 function clearTextOnBodyClick() {
     document.getElementById("suggestions").innerHTML = "";
+}
+function hoverElements(id) {
+    document.getElementById(id).style.backgroundColor="#FFFFFF";
+    j=id;
+    for(var i=0;i<suggestionIndex.length;i++){
+        if(suggestionIndex[i]!=id)
+        {
+            document.getElementById(suggestionIndex[i]).style.backgroundColor="#b7dacd";
+        }
+    }
 }
