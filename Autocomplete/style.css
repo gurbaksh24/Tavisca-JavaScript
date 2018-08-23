@@ -39,6 +39,7 @@ input:focus{
 span{
     position: relative;
     top: 2px;
+    right: 5px;
     width: 50px;
     padding-bottom: 1px;
     border: 2px solid #000000;
